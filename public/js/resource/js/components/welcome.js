@@ -80,6 +80,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "usuarios",
   data: function data() {
@@ -115,7 +116,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         }, _callee);
       }))();
     },
-    deleteUsuarios: function deleteUsuarios(id) {
+    deleteUsuario: function deleteUsuario(id) {
       var _this2 = this;
 
       if (confirm("Deseja excluir?")) {
@@ -991,7 +992,7 @@ var render = function() {
         _c(
           "router-link",
           {
-            staticClass: "btn btn-primary",
+            staticClass: "btn btn-dark",
             attrs: { to: { name: "usuarioAdd" } }
           },
           [_vm._v("+ Adicionar")]
@@ -1032,7 +1033,7 @@ var render = function() {
                             _c(
                               "router-link",
                               {
-                                staticClass: "btn btn-success",
+                                staticClass: "btn btn-warning",
                                 attrs: {
                                   to: {
                                     name: "usuarioEdit",
@@ -1096,7 +1097,9 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("th", [_vm._v("PERFIL")]),
         _vm._v(" "),
-        _c("th", [_vm._v("ENDEREÇO")])
+        _c("th", [_vm._v("ENDEREÇO")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("AÇÕES")])
       ])
     ])
   },

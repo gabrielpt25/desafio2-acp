@@ -1,7 +1,7 @@
 <template>
     <div class="row">
         <div class="col-12 mb-2 text-end">
-            <router-link :to='{name:"usuarioAdd"}' class="btn btn-primary">+ Adicionar</router-link>
+            <router-link :to='{name:"usuarioAdd"}' class="btn btn-dark">+ Adicionar</router-link>
         </div>
         <div class="col-12">
             <div class="card">
@@ -19,6 +19,7 @@
                                     <th>CPF</th>
                                     <th>PERFIL</th>
                                     <th>ENDEREÇO</th>
+                                    <th>AÇÕES</th>
                                 </tr>
                             </thead>
                             <tbody v-if="usuarios.length > 0">
@@ -30,8 +31,8 @@
                                     <td>{{ usuario.perfil }}</td>
                                     <td>{{ usuario.endereco }}</td>
                                     <td>
-                                        <router-link :to='{name:"usuarioEdit",params:{id:usuario.id}}' class="btn btn-success">Alterar</router-link>
-                                        <button type="button" @click="deleteUsuario(usuario.id)" class="btn btn-danger">Excluir</button>
+                                        <router-link :to='{name:"usuarioEdit",params:{id:usuario.id}}' class="btn btn-warning">Alterar</router-link>
+                                        <button type="button" @click="deleteUsuario(usuario.id)" class="btn btn-danger"> Excluir</button>
                                     </td>
                                 </tr>
                             </tbody>
@@ -68,7 +69,7 @@ export default {
                 this.usuarios = []
             })
         },
-        deleteUsuarios(id){
+        deleteUsuario(id){
             if(confirm("Deseja excluir?")){
                 this.axios.delete(`/api/usuario/${id}`).then(response=>{
                     this.getUsuarios()

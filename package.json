@@ -17,6 +17,8 @@
         "vue-template-compiler": "^2.6.14"
     },
     "dependencies": {
+        "@trevoreyre/autocomplete-js": "^2.2.0",
+        "bootstrap-icons": "^1.5.0",
         "vue": "^2.6.14",
         "vue-axios": "^3.3.7",
         "vue-loader": "^15.9.8",
